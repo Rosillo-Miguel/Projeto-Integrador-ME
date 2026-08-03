@@ -1,4 +1,4 @@
-import { IPaginatedResult } from "../../types/request.types.js";
+import { IPaginatedResult } from "../../types/response.types.js";
 
 export interface IAddress {
   cep: string;

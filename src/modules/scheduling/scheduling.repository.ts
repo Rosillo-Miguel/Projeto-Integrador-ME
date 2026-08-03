@@ -76,7 +76,7 @@ export class SchedulingRepository implements ISchedulingRepository {
         })
         .skip(skip)
         .limit(limit)
-        .sort({ dateScheduling: +1 })
+        .sort({ dateScheduling: 1 })
         .lean(),
 
       SchedulingModel.countDocuments(filter),

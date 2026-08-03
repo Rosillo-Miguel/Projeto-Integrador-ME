@@ -1,4 +1,4 @@
-import { FindAllParams, IPaginatedResult } from "../../types/response.types.js";
+import { IPaginatedResult } from "../../types/response.types.js";
 
 export interface ISpecialty {
   _id?: string;
