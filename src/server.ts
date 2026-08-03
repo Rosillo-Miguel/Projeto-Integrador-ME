@@ -5,11 +5,11 @@ import database from "./config/database.js";
 const PORT = process.env.PORT || 3000;
 
 async function startServer(): Promise<void> {
-  await database.connect();
-};
+	await database.connect();
+}
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+	console.log(`Servidor rodando na porta ${PORT}`);
 });
 
 startServer();

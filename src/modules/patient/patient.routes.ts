@@ -1,7 +1,7 @@
 import { Router } from "express";
+import { PatientController } from "./patient.controller.js";
 import { PatientRepository } from "./patient.repository.js";
 import { PatientService } from "./patient.service.js";
-import { PatientController } from "./patient.controller.js";
 
 const patientRoutes = Router();
 

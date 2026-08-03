@@ -1,7 +1,7 @@
 import { Router } from "express";
+import { ExpertController } from "./expert.controller.js";
 import { ExpertRepository } from "./expert.repository.js";
 import { ExpertService } from "./expert.service.js";
-import { ExpertController } from "./expert.controller.js";
 
 const expertRoutes = Router();
 

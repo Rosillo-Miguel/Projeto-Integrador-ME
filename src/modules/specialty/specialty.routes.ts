@@ -1,7 +1,7 @@
 import { Router } from "express";
+import { SpecialtyController } from "./specialty.controller.js";
 import { SpecialtyRepository } from "./specialty.repository.js";
 import { SpecialtyService } from "./specialty.service.js";
-import { SpecialtyController } from "./specialty.controller.js";
 
 const specialtyRoutes = Router();
 

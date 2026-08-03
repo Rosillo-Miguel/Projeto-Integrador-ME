@@ -1,14 +1,17 @@
-import { IPaginatedResult } from "../../types/response.types.js";
-import { FindAllParams } from "../../types/response.types.js";
-import SchedulingModel from "./scheduling.model.js";
-import {
-  ISchedulingRepository,
-  ICreateSchedulingDTO,
-  IUpdateSchedulingDTO,
-  IScheduling,
-} from "./scheduling.types.js";
-import PatientModel from "../patient/patient.model.js";
+import type {
+  FindAllParams,
+  IPaginatedResult,
+} from "../../types/response.types.js";
 import ExpertModel from "../expert/expert.model.js";
+import type { IExpert } from "../expert/expert.types.js";
+import PatientModel from "../patient/patient.model.js";
+import SchedulingModel from "./scheduling.model.js";
+import type {
+  ICreateSchedulingDTO,
+  IScheduling,
+  ISchedulingRepository,
+  IUpdateSchedulingDTO,
+} from "./scheduling.types.js";
 export class SchedulingRepository implements ISchedulingRepository {
   public async create(data: ICreateSchedulingDTO): Promise<IScheduling> {
     const scheduling = await SchedulingModel.create(data);
@@ -41,7 +44,7 @@ export class SchedulingRepository implements ISchedulingRepository {
       })
         .select("_id")
         .lean();
-      const expertIds = experts.map((e: any) => e._id);
+      const expertIds = experts.map((e: IExpert) => e.id);
 
       filter.$or = [
         { patient: { $in: patientIds } },

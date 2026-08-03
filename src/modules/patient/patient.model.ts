@@ -39,7 +39,7 @@ export const patientSchema = new Schema<IPatient>(
       type: String,
       required: true,
       trim: true,
-      enum:["F", "M"]
+      enum: ["F", "M"],
     },
     address: {
       cep: { type: String, trim: true },
